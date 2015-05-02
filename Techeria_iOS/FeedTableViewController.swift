@@ -93,8 +93,9 @@ class FeedTableViewController: UITableViewController {
                                             post.type = type
                                             if let url = separator[i]["url"] as? String{
                                                 post.url = url
-                                                if let votes = separator[i]["votes"] as? String{
+                                                if let votes = separator[i]["votes"] as? Int{
                                                     post.votes = votes
+                                                    println(votes)
                                                 }
                                             }
                                         }
@@ -110,7 +111,6 @@ class FeedTableViewController: UITableViewController {
             }
         }
         task.resume()
-        //do_table_refresh();
 
     }
     
@@ -125,13 +125,28 @@ class FeedTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Post", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = posts[indexPath.row].description
+        var name = posts[indexPath.row].forum
+        var author = posts[indexPath.row].author
+        var text = posts[indexPath.row].reference
+        var upvote = posts[indexPath.row].votes
+        
+        println(upvote)
+        
+        
+        if let nameLabel = cell.viewWithTag(100) as? UILabel {
+            nameLabel.text = text
+        }
+        if let descriptionLabel = cell.viewWithTag(101) as? UILabel {
+            descriptionLabel.text = "Submitted to \(name) by \(author)"
+        }
+        if let upvoteLabel = cell.viewWithTag(99) as? UILabel {
+            upvoteLabel.text = String(upvote)
+        }
+//        cell.ForumLabel?.text = text
+//        cell.DescriptionLabel?.text = "Submitted to \(name) by \(author)"
         return cell
     }
     
-    
-    
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
