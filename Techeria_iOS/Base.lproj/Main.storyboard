@@ -37,11 +37,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Connections" image="meeting-32.png" id="kCj-sW-jdx"/>
+                    <tabBarItem key="tabBarItem" title="Connections" image="group-32.png" id="kCj-sW-jdx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZc-Uc-hPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="-3"/>
+            <point key="canvasLocation" x="-508" y="-219"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="b4a-Jc-PAC">
+            <objects>
+                <tableViewController id="lTJ-cJ-oBJ" customClass="FeedTableViewController" customModule="Techeria_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GhJ-JE-pcg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Post" textLabel="vvx-qG-BRZ" detailTextLabel="AW4-er-Cfp" style="IBUITableViewCellStyleSubtitle" id="IAF-UM-E1h">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAF-UM-E1h" id="spb-09-1qL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vvx-qG-BRZ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AW4-er-Cfp">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lTJ-cJ-oBJ" id="W2o-L6-6NP"/>
+                            <outlet property="delegate" destination="lTJ-cJ-oBJ" id="WRt-pj-Cyx"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Feed" id="UaQ-WE-ndr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRe-sD-m4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="-212"/>
         </scene>
         <!--Techeria-->
         <scene sceneID="BTD-wU-kxe">
@@ -73,14 +115,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="administrator-32.png" selectedImage="meeting-32.png" id="AWw-Gn-jaa"/>
-                    <navigationItem key="navigationItem" title="Techeria" id="voa-t9-U3B">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="alt-Qy-NDQ">
-                            <connections>
-                                <action selector="logout:" destination="ajj-d3-hds" id="AWY-qq-cV4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Profile" image="administrator-32.png" id="AWw-Gn-jaa"/>
+                    <navigationItem key="navigationItem" title="Techeria" id="voa-t9-U3B"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="first" destination="m0M-DT-9hK" id="fQH-Rd-1DM"/>
@@ -142,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3f-FX-f1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338" y="-1534"/>
+            <point key="canvasLocation" x="796" y="-914"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YRj-ec-WLS">
@@ -159,6 +195,7 @@
                     <connections>
                         <segue destination="ajj-d3-hds" kind="relationship" relationship="viewControllers" id="HA7-lr-uMF"/>
                         <segue destination="ynE-C2-EOT" kind="relationship" relationship="viewControllers" id="UNE-oh-C3q"/>
+                        <segue destination="lTJ-cJ-oBJ" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-bk-bga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,7 +205,7 @@
     </scenes>
     <resources>
         <image name="administrator-32.png" width="32" height="32"/>
-        <image name="meeting-32.png" width="32" height="32"/>
+        <image name="group-32.png" width="32" height="32"/>
         <image name="techeria_logo.jpg" width="900" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -19,5 +19,19 @@ class User: NSObject{
     var email: NSObject!
     var profession: NSObject!
     var employer: NSObject!
-    
+}
+
+class Forum: NSObject{
+    var author: NSObject!
+    var forum: NSObject!
+    var reference: NSObject!
+    var text: NSObject!
+    var type: NSObject!
+    var url: NSObject!
+    var votes: NSObject!
+}
+
+class Feed: NSObject{
+    var forum_posts: NSArray!
+    var size: NSInteger!
 }
