@@ -24,44 +24,6 @@
             </objects>
             <point key="canvasLocation" x="-508" y="-908"/>
         </scene>
-        <!--Search View Controller-->
-        <scene sceneID="VP2-qw-Cbh">
-            <objects>
-                <viewController id="APi-5l-4oM" customClass="SearchViewController" customModule="Techeria_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cfj-YT-Avh"/>
-                        <viewControllerLayoutGuide type="bottom" id="dDJ-qs-C10"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NG0-LZ-bah">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8A-oh-54a">
-                                <rect key="frame" x="16" y="325" width="288" height="30"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchSelected:" destination="APi-5l-4oM" eventType="touchUpInside" id="VGx-a4-W7s"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-bp-tyY">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NjQ-Sd-Hm1"/>
-                    <connections>
-                        <outlet property="searchText" destination="C5u-bp-tyY" id="omn-uY-3gC"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="le5-dQ-O3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-87" y="-908"/>
-        </scene>
         <!--Connections-->
         <scene sceneID="xF3-Hi-7EW">
             <objects>
@@ -79,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZc-Uc-hPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-516" y="481"/>
+            <point key="canvasLocation" x="-64" y="-173"/>
         </scene>
         <!--Techeria-->
         <scene sceneID="BTD-wU-kxe">
@@ -129,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vky-b8-cgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="-238"/>
+            <point key="canvasLocation" x="338" y="-908"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="EI5-TR-Hsi">
@@ -180,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3f-FX-f1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="-238"/>
+            <point key="canvasLocation" x="338" y="-1534"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YRj-ec-WLS">
@@ -201,7 +163,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-bk-bga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="-238"/>
+            <point key="canvasLocation" x="-64" y="-908"/>
         </scene>
     </scenes>
     <resources>
