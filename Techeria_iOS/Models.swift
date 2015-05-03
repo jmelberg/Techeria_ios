@@ -31,3 +31,10 @@ class Forum: NSObject{
     var url: String!
     var votes: Int!
 }
+
+class Message: NSObject{
+    var type: String!
+    var sender: String!
+    var recipient: String!
+    var text: String!
+}

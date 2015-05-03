@@ -15,6 +15,8 @@
 		719086891AF5AF030023C4B7 /* group-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086851AF5AF030023C4B7 /* group-32.png */; };
 		7190868A1AF5AF030023C4B7 /* meeting-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086861AF5AF030023C4B7 /* meeting-32.png */; };
 		7190868B1AF5AF030023C4B7 /* message_group-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086871AF5AF030023C4B7 /* message_group-32.png */; };
+		7190868D1AF5BC7B0023C4B7 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190868C1AF5BC7B0023C4B7 /* MessageTableViewController.swift */; };
+		7190868F1AF5C2EF0023C4B7 /* NewMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190868E1AF5C2EF0023C4B7 /* NewMessageTableViewController.swift */; };
 		71B1EA351AF01F0800E135F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B1EA311AF01F0800E135F5 /* AppDelegate.swift */; };
 		71B1EA3A1AF01F5100E135F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B1EA391AF01F5100E135F5 /* Images.xcassets */; };
 		71B1EA3F1AF01FC900E135F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B1EA3D1AF01FC900E135F5 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		719086851AF5AF030023C4B7 /* group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "group-32.png"; path = "Techeria_iOS/group-32.png"; sourceTree = "<group>"; };
 		719086861AF5AF030023C4B7 /* meeting-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "meeting-32.png"; path = "Techeria_iOS/meeting-32.png"; sourceTree = "<group>"; };
 		719086871AF5AF030023C4B7 /* message_group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "message_group-32.png"; path = "Techeria_iOS/message_group-32.png"; sourceTree = "<group>"; };
+		7190868C1AF5BC7B0023C4B7 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewController.swift; path = Techeria_iOS/MessageTableViewController.swift; sourceTree = "<group>"; };
+		7190868E1AF5C2EF0023C4B7 /* NewMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageTableViewController.swift; path = Techeria_iOS/NewMessageTableViewController.swift; sourceTree = "<group>"; };
 		71B1EA311AF01F0800E135F5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Techeria_iOS/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		71B1EA391AF01F5100E135F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Techeria_iOS/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		71B1EA3E1AF01FC900E135F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Techeria_iOS/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -104,6 +108,8 @@
 				71B2F6181AF1B3EA00F6EE4D /* HomeViewController.swift */,
 				7190867E1AF562C40023C4B7 /* Models.swift */,
 				719086821AF56D070023C4B7 /* FeedTableViewController.swift */,
+				7190868C1AF5BC7B0023C4B7 /* MessageTableViewController.swift */,
+				7190868E1AF5C2EF0023C4B7 /* NewMessageTableViewController.swift */,
 			);
 			name = Techeria_iOS;
 			path = /Users/jmelberg/Development/Techeria_iOS;
@@ -224,9 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71B2F6191AF1B3EA00F6EE4D /* HomeViewController.swift in Sources */,
+				7190868F1AF5C2EF0023C4B7 /* NewMessageTableViewController.swift in Sources */,
 				71B2F6171AF1B37F00F6EE4D /* LoginViewController.swift in Sources */,
 				719086831AF56D070023C4B7 /* FeedTableViewController.swift in Sources */,
 				71B1EA351AF01F0800E135F5 /* AppDelegate.swift in Sources */,
+				7190868D1AF5BC7B0023C4B7 /* MessageTableViewController.swift in Sources */,
 				7190867F1AF562C40023C4B7 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
