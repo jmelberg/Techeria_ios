@@ -20,12 +20,8 @@ class FeedTableViewController: UITableViewController {
             getFeedData()
         }
         else{
-            println("feed here...")
+            println("feed not here...")
         }
-
-
-        
-
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -89,13 +85,15 @@ class FeedTableViewController: UITableViewController {
                                     post.reference = reference
                                     if let text = separator[i]["text"] as? String{
                                         post.text = text
-                                        if let type = separator[i]["type"] as? String{
-                                            post.type = type
-                                            if let url = separator[i]["url"] as? String{
-                                                post.url = url
-                                                if let votes = separator[i]["votes"] as? Int{
-                                                    post.votes = votes
-                                                    println(votes)
+                                        if let title = separator[i]["title"] as? String{
+                                            post.title = title
+                                            if let type = separator[i]["type"] as? String{
+                                                post.type = type
+                                                if let url = separator[i]["url"] as? String{
+                                                    post.url = url
+                                                    if let votes = separator[i]["votes"] as? Int{
+                                                        post.votes = votes
+                                                    }
                                                 }
                                             }
                                         }
@@ -127,11 +125,8 @@ class FeedTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Post", forIndexPath: indexPath) as! UITableViewCell
         var name = posts[indexPath.row].forum
         var author = posts[indexPath.row].author
-        var text = posts[indexPath.row].reference
+        var text = posts[indexPath.row].title
         var upvote = posts[indexPath.row].votes
-        
-        println(upvote)
-        
         
         if let nameLabel = cell.viewWithTag(100) as? UILabel {
             nameLabel.text = text
@@ -142,8 +137,6 @@ class FeedTableViewController: UITableViewController {
         if let upvoteLabel = cell.viewWithTag(99) as? UILabel {
             upvoteLabel.text = String(upvote)
         }
-//        cell.ForumLabel?.text = text
-//        cell.DescriptionLabel?.text = "Submitted to \(name) by \(author)"
         return cell
     }
     

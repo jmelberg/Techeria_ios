@@ -19,7 +19,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +27,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+
         let loggedIn = NSUserDefaults.standardUserDefaults().stringForKey("access_token")
         if (loggedIn == nil){
             self.performSegueWithIdentifier("login", sender: self)

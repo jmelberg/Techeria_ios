@@ -10,8 +10,11 @@
 		719086721AF550280023C4B7 /* orange_techeria_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 719086701AF550280023C4B7 /* orange_techeria_logo.jpg */; };
 		719086731AF550280023C4B7 /* techeria_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 719086711AF550280023C4B7 /* techeria_logo.jpg */; };
 		7190867F1AF562C40023C4B7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7190867E1AF562C40023C4B7 /* Models.swift */; };
-		719086811AF5661A0023C4B7 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 719086801AF5661A0023C4B7 /* Icons */; };
 		719086831AF56D070023C4B7 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719086821AF56D070023C4B7 /* FeedTableViewController.swift */; };
+		719086881AF5AF030023C4B7 /* administrator-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086841AF5AF030023C4B7 /* administrator-32.png */; };
+		719086891AF5AF030023C4B7 /* group-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086851AF5AF030023C4B7 /* group-32.png */; };
+		7190868A1AF5AF030023C4B7 /* meeting-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086861AF5AF030023C4B7 /* meeting-32.png */; };
+		7190868B1AF5AF030023C4B7 /* message_group-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 719086871AF5AF030023C4B7 /* message_group-32.png */; };
 		71B1EA351AF01F0800E135F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B1EA311AF01F0800E135F5 /* AppDelegate.swift */; };
 		71B1EA3A1AF01F5100E135F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B1EA391AF01F5100E135F5 /* Images.xcassets */; };
 		71B1EA3F1AF01FC900E135F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B1EA3D1AF01FC900E135F5 /* Main.storyboard */; };
@@ -34,8 +37,11 @@
 		719086701AF550280023C4B7 /* orange_techeria_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = orange_techeria_logo.jpg; path = Techeria_iOS/orange_techeria_logo.jpg; sourceTree = SOURCE_ROOT; };
 		719086711AF550280023C4B7 /* techeria_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = techeria_logo.jpg; path = Techeria_iOS/techeria_logo.jpg; sourceTree = SOURCE_ROOT; };
 		7190867E1AF562C40023C4B7 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Techeria_iOS/Models.swift; sourceTree = SOURCE_ROOT; };
-		719086801AF5661A0023C4B7 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = Techeria_iOS/Icons; sourceTree = "<group>"; };
 		719086821AF56D070023C4B7 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewController.swift; path = Techeria_iOS/FeedTableViewController.swift; sourceTree = "<group>"; };
+		719086841AF5AF030023C4B7 /* administrator-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "administrator-32.png"; path = "Techeria_iOS/administrator-32.png"; sourceTree = "<group>"; };
+		719086851AF5AF030023C4B7 /* group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "group-32.png"; path = "Techeria_iOS/group-32.png"; sourceTree = "<group>"; };
+		719086861AF5AF030023C4B7 /* meeting-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "meeting-32.png"; path = "Techeria_iOS/meeting-32.png"; sourceTree = "<group>"; };
+		719086871AF5AF030023C4B7 /* message_group-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "message_group-32.png"; path = "Techeria_iOS/message_group-32.png"; sourceTree = "<group>"; };
 		71B1EA311AF01F0800E135F5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Techeria_iOS/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		71B1EA391AF01F5100E135F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Techeria_iOS/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		71B1EA3E1AF01FC900E135F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Techeria_iOS/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -84,7 +90,10 @@
 		9240066019CABECA00371784 /* Techeria_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				719086801AF5661A0023C4B7 /* Icons */,
+				719086841AF5AF030023C4B7 /* administrator-32.png */,
+				719086851AF5AF030023C4B7 /* group-32.png */,
+				719086861AF5AF030023C4B7 /* meeting-32.png */,
+				719086871AF5AF030023C4B7 /* message_group-32.png */,
 				719086701AF550280023C4B7 /* orange_techeria_logo.jpg */,
 				719086711AF550280023C4B7 /* techeria_logo.jpg */,
 				71B1EA391AF01F5100E135F5 /* Images.xcassets */,
@@ -190,9 +199,12 @@
 			files = (
 				719086721AF550280023C4B7 /* orange_techeria_logo.jpg in Resources */,
 				71B1EA3A1AF01F5100E135F5 /* Images.xcassets in Resources */,
+				719086881AF5AF030023C4B7 /* administrator-32.png in Resources */,
+				719086891AF5AF030023C4B7 /* group-32.png in Resources */,
+				7190868A1AF5AF030023C4B7 /* meeting-32.png in Resources */,
 				71B1EA3F1AF01FC900E135F5 /* Main.storyboard in Resources */,
-				719086811AF5661A0023C4B7 /* Icons in Resources */,
 				71B1EA411AF0201600E135F5 /* Info.plist in Resources */,
+				7190868B1AF5AF030023C4B7 /* message_group-32.png in Resources */,
 				719086731AF550280023C4B7 /* techeria_logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

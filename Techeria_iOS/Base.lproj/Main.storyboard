@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="FNL-Fr-fdT" kind="relationship" relationship="rootViewController" id="4Bd-EA-nf2"/>
+                        <segue destination="FNL-Fr-fdT" kind="relationship" relationship="rootViewController" id="pqB-MB-1wC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyX-vp-WuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-508" y="-908"/>
         </scene>
-        <!--Connections-->
+        <!--Messages-->
         <scene sceneID="xF3-Hi-7EW">
             <objects>
                 <viewController id="ynE-C2-EOT" sceneMemberID="viewController">
@@ -37,13 +37,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Connections" image="group-32.png" id="kCj-sW-jdx"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="message_group-32.png" id="kCj-sW-jdx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZc-Uc-hPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-508" y="-219"/>
         </scene>
-        <!--Feed-->
+        <!--Feed Table View Controller-->
         <scene sceneID="b4a-Jc-PAC">
             <objects>
                 <tableViewController id="lTJ-cJ-oBJ" customClass="FeedTableViewController" customModule="Techeria_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,14 +84,14 @@
                             <outlet property="delegate" destination="lTJ-cJ-oBJ" id="WRt-pj-Cyx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Feed" id="UaQ-WE-ndr"/>
+                    <navigationItem key="navigationItem" id="i4e-f6-njC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRe-sD-m4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="-212"/>
+            <point key="canvasLocation" x="468" y="-219"/>
         </scene>
-        <!--Techeria-->
+        <!--Profile-->
         <scene sceneID="BTD-wU-kxe">
             <objects>
                 <viewController id="ajj-d3-hds" customClass="HomeViewController" customModule="Techeria_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="administrator-32.png" id="AWw-Gn-jaa"/>
-                    <navigationItem key="navigationItem" title="Techeria" id="voa-t9-U3B"/>
+                    <navigationItem key="navigationItem" id="voa-t9-U3B"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="first" destination="m0M-DT-9hK" id="fQH-Rd-1DM"/>
@@ -190,7 +190,9 @@
         <scene sceneID="YRj-ec-WLS">
             <objects>
                 <tabBarController id="FNL-Fr-fdT" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RFe-Dk-eU3"/>
+                    <navigationItem key="navigationItem" id="RFe-Dk-eU3">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="CHO-Os-1Ra"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="OXi-pd-Dni">
@@ -201,17 +203,36 @@
                     <connections>
                         <segue destination="ajj-d3-hds" kind="relationship" relationship="viewControllers" id="HA7-lr-uMF"/>
                         <segue destination="ynE-C2-EOT" kind="relationship" relationship="viewControllers" id="UNE-oh-C3q"/>
-                        <segue destination="lTJ-cJ-oBJ" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
+                        <segue destination="Wjc-9j-PcC" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-bk-bga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-64" y="-908"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="nRP-e9-poS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wjc-9j-PcC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="UaQ-WE-ndr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1lC-2D-eue">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lTJ-cJ-oBJ" kind="relationship" relationship="rootViewController" id="Sir-Ps-Cc1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOt-HF-KJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="-219"/>
+        </scene>
     </scenes>
     <resources>
         <image name="administrator-32.png" width="32" height="32"/>
-        <image name="group-32.png" width="32" height="32"/>
+        <image name="message_group-32.png" width="32" height="32"/>
         <image name="techeria_logo.jpg" width="900" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

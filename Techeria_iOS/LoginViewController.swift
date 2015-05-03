@@ -61,32 +61,27 @@ class LoginViewController: UIViewController {
                 println("Response Data: \(responseString)")
                 
                 var err: NSError?
-                if let json: NSArray? = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &err) as? NSArray{
-                    var json_error: NSError?
-                    if let separator  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &json_error){
-                        println("Separator: \(separator)")
-                        if let element = separator[0] as? NSDictionary{
-                            println("Element: \(element)")
-                            if let token = element["token"] as? String{
-                                println("Token: \(token)")
-                                
-                                // Stores User's username and access token for future use //
-                                NSUserDefaults.standardUserDefaults().setObject(token, forKey: "access_token")
-                                NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
-                                NSUserDefaults.standardUserDefaults().synchronize()
-                                self.dismissViewControllerAnimated(true, completion: nil)
-                            }
-                        }
+                if let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+                    if let token = json["token"] as? String {
+                        println("Token: \(token)")
+                        
+                        // Stores User's username and access token for future use //
+                        NSUserDefaults.standardUserDefaults().setObject(token, forKey: "access_token")
+                        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
+                    else{
+                        var alertView: UIAlertView = UIAlertView()
+                        alertView.title = "Signin Failed"
+                        alertView.message = "Please try again"
+                        alertView.delegate = self
+                        alertView.addButtonWithTitle("Continue")
+                        alertView.show()
+                    }
+
                 }
-                else{
-                    var alertView: UIAlertView = UIAlertView()
-                    alertView.title = "Signin Failed"
-                    alertView.message = "Please try again"
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("Continue")
-                    alertView.show()
-                }
+                
             }
             task.resume()
         }

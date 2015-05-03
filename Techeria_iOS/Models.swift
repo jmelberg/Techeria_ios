@@ -26,6 +26,7 @@ class Forum: NSObject{
     var forum: String!
     var reference: String!
     var text: String!
+    var title: String!
     var type: String!
     var url: String!
     var votes: Int!
