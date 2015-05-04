@@ -70,7 +70,7 @@ class MessageTableViewController: UITableViewController {
             var err: NSError?
             if let json: NSArray? = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &err) as? NSArray{
                 var json_error: NSError?
-                if let separator  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &json_error){
+                if let separator: AnyObject  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &json_error){
                     var i = 0
                     while (i < separator.count) {
                         var message = Message()
@@ -113,26 +113,26 @@ class MessageTableViewController: UITableViewController {
         cell.detailTextLabel?.text = text
         return cell
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
+        
         return true
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            messages.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

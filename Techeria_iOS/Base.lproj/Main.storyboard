@@ -109,10 +109,50 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="i4e-f6-njC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="cyV-ys-6sf" kind="push" identifier="forumView" id="QHV-sv-Zm3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRe-sD-m4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58" y="422"/>
+        </scene>
+        <!--Forum View Controller-->
+        <scene sceneID="mxo-Tx-JU3">
+            <objects>
+                <viewController id="cyV-ys-6sf" customClass="ForumViewController" customModule="Techeria_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cEL-3F-qtW"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHb-JX-IA7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l0d-7q-lbb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8K-Ft-W3W">
+                                <rect key="frame" x="16" y="71" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="0hO-sj-uVZ">
+                                <rect key="frame" x="16" y="107" width="288" height="253"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bFA-4E-Ig3"/>
+                    <connections>
+                        <outlet property="forum" destination="e8K-Ft-W3W" id="DB0-CU-kpU"/>
+                        <outlet property="text" destination="0hO-sj-uVZ" id="TaR-1b-1Jd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foX-Fc-ViT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339" y="426"/>
         </scene>
         <!--Profile-->
         <scene sceneID="BTD-wU-kxe">
@@ -127,16 +167,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0M-DT-9hK">
-                                <rect key="frame" x="98" y="234" width="125" height="21"/>
+                                <rect key="frame" x="98" y="241" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48F-nP-AOO">
-                                <rect key="frame" x="24" y="98" width="274" height="128"/>
+                                <rect key="frame" x="24" y="106" width="274" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profession" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-JB-fzs">
-                                <rect key="frame" x="23" y="263" width="274" height="21"/>
+                                <rect key="frame" x="23" y="267" width="274" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -229,8 +269,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Wjc-9j-PcC" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                         <segue destination="ajj-d3-hds" kind="relationship" relationship="viewControllers" id="HA7-lr-uMF"/>
+                        <segue destination="Wjc-9j-PcC" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                         <segue destination="Y6r-Q3-EFJ" kind="relationship" relationship="viewControllers" id="UNE-oh-C3q"/>
                     </connections>
                 </tabBarController>

@@ -73,7 +73,7 @@ class FeedTableViewController: UITableViewController {
             var err: NSError?
             if let json: NSArray? = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &err) as? NSArray{
                 var json_error: NSError?
-                if let separator  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &json_error){
+                if let separator: AnyObject  = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &json_error){
                     var i = 0
                     while (i < separator.count) {
                         var post = Forum()
@@ -138,6 +138,31 @@ class FeedTableViewController: UITableViewController {
             upvoteLabel.text = String(upvote)
         }
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let rowData = self.tableView.dequeueReusableCellWithIdentifier("Post", forIndexPath: indexPath) as! UITableViewCell
+        // Get URL
+        
+        let url = posts[indexPath.row].url
+        if url != ""{
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        }
+        else{
+            var forum = posts[indexPath.row].forum
+            var title = posts[indexPath.row].title
+            var text = posts[indexPath.row].text
+            var name = "\(forum): \(title)"
+            
+            NSUserDefaults.standardUserDefaults().setObject(name, forKey: "forum_name")
+            NSUserDefaults.standardUserDefaults().setObject(text, forKey: "forum_description")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            println("Stored forum for viewing")
+            NSOperationQueue.mainQueue().addOperationWithBlock{
+            self.performSegueWithIdentifier("forumView", sender: self)
+            }
+            
+        }
     }
     
     /*
