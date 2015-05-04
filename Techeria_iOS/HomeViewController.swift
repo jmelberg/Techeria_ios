@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var first: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var user_description: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,14 +92,4 @@ class HomeViewController: UIViewController {
             users[0] = user
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

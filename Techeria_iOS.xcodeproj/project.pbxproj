@@ -24,6 +24,7 @@
 		71B2F6191AF1B3EA00F6EE4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2F6181AF1B3EA00F6EE4D /* HomeViewController.swift */; };
 		71CA30C41AF70D9F0074B076 /* home-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CA30C31AF70D9F0074B076 /* home-32.png */; };
 		71CA30C61AF712E70074B076 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA30C51AF712E70074B076 /* NewMessageViewController.swift */; };
+		71CA30D01AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		71B2F6181AF1B3EA00F6EE4D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Techeria_iOS/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		71CA30C31AF70D9F0074B076 /* home-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-32.png"; path = "Techeria_iOS/home-32.png"; sourceTree = "<group>"; };
 		71CA30C51AF712E70074B076 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageViewController.swift; path = Techeria_iOS/NewMessageViewController.swift; sourceTree = "<group>"; };
+		71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu_start_taskbar_and_window_panel_list-128.png"; path = "Techeria_iOS/menu_start_taskbar_and_window_panel_list-128.png"; sourceTree = "<group>"; };
 		9240065E19CABECA00371784 /* Techeria_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Techeria_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9240067319CABECA00371784 /* Techeria_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Techeria_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		9240066019CABECA00371784 /* Techeria_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */,
 				71CA30C31AF70D9F0074B076 /* home-32.png */,
 				719086841AF5AF030023C4B7 /* administrator-32.png */,
 				719086851AF5AF030023C4B7 /* group-32.png */,
@@ -216,6 +219,7 @@
 				71B1EA411AF0201600E135F5 /* Info.plist in Resources */,
 				7190868B1AF5AF030023C4B7 /* message_group-32.png in Resources */,
 				719086731AF550280023C4B7 /* techeria_logo.jpg in Resources */,
+				71CA30D01AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

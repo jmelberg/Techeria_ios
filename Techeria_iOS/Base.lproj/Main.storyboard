@@ -214,6 +214,7 @@
             <objects>
                 <tabBarController id="FNL-Fr-fdT" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RFe-Dk-eU3">
+                        <barButtonItem key="leftBarButtonItem" image="menu_start_taskbar_and_window_panel_list-128.png" id="vE0-35-uKc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="CHO-Os-1Ra">
                             <connections>
                                 <segue destination="NXI-F4-Gku" kind="modal" id="YKS-3Z-niX"/>
@@ -228,14 +229,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Wjc-9j-PcC" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                         <segue destination="ajj-d3-hds" kind="relationship" relationship="viewControllers" id="HA7-lr-uMF"/>
                         <segue destination="Y6r-Q3-EFJ" kind="relationship" relationship="viewControllers" id="UNE-oh-C3q"/>
-                        <segue destination="Wjc-9j-PcC" kind="relationship" relationship="viewControllers" id="7fq-bT-3Hc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JB-bk-bga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="-908"/>
+            <point key="canvasLocation" x="-70" y="-914"/>
         </scene>
         <!--Feed-->
         <scene sceneID="nRP-e9-poS">
@@ -368,6 +369,7 @@
     <resources>
         <image name="administrator-32.png" width="32" height="32"/>
         <image name="home-32.png" width="32" height="32"/>
+        <image name="menu_start_taskbar_and_window_panel_list-128.png" width="32" height="32"/>
         <image name="message_group-32.png" width="32" height="32"/>
         <image name="techeria_logo.jpg" width="900" height="300"/>
     </resources>
@@ -377,6 +379,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kwd-FA-anP"/>
+        <segue reference="HA7-lr-uMF"/>
     </inferredMetricsTieBreakers>
 </document>
