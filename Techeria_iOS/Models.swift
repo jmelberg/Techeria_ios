@@ -37,4 +37,5 @@ class Message: NSObject{
     var sender: String!
     var recipient: String!
     var text: String!
+    var subject: String!
 }

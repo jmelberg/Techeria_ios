@@ -90,15 +90,19 @@ class NewMessageViewController: UIViewController {
         }
         task.resume()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        recipient.resignFirstResponder()
+        subject.resignFirstResponder()
+        message.resignFirstResponder()
+        return true
     }
-    */
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            self.view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
 
 }

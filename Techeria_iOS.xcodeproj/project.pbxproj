@@ -23,6 +23,11 @@
 		71B1EA411AF0201600E135F5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71B1EA401AF0201600E135F5 /* Info.plist */; };
 		71B2F6171AF1B37F00F6EE4D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2F6161AF1B37F00F6EE4D /* LoginViewController.swift */; };
 		71B2F6191AF1B3EA00F6EE4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B2F6181AF1B3EA00F6EE4D /* HomeViewController.swift */; };
+		71B4B6081AF8287D005D643E /* ConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B6071AF8287D005D643E /* ConnectionTableViewController.swift */; };
+		71B4B60A1AF8326A005D643E /* happy_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B6091AF8326A005D643E /* happy_user.png */; };
+		71B4B60C1AF833B8005D643E /* ConnectionViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B60B1AF833B8005D643E /* ConnectionViewerViewController.swift */; };
+		71B4B60E1AF8379C005D643E /* MessageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4B60D1AF8379C005D643E /* MessageViewerViewController.swift */; };
+		71B4B6101AF840EA005D643E /* App Icons in Resources */ = {isa = PBXBuildFile; fileRef = 71B4B60F1AF840EA005D643E /* App Icons */; };
 		71CA30C41AF70D9F0074B076 /* home-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CA30C31AF70D9F0074B076 /* home-32.png */; };
 		71CA30C61AF712E70074B076 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA30C51AF712E70074B076 /* NewMessageViewController.swift */; };
 		71CA30D01AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */; };
@@ -55,6 +60,11 @@
 		71B1EA401AF0201600E135F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Techeria_iOS/Info.plist; sourceTree = SOURCE_ROOT; };
 		71B2F6161AF1B37F00F6EE4D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Techeria_iOS/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		71B2F6181AF1B3EA00F6EE4D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Techeria_iOS/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		71B4B6071AF8287D005D643E /* ConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionTableViewController.swift; path = Techeria_iOS/ConnectionTableViewController.swift; sourceTree = "<group>"; };
+		71B4B6091AF8326A005D643E /* happy_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happy_user.png; path = Techeria_iOS/happy_user.png; sourceTree = "<group>"; };
+		71B4B60B1AF833B8005D643E /* ConnectionViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionViewerViewController.swift; path = Techeria_iOS/ConnectionViewerViewController.swift; sourceTree = "<group>"; };
+		71B4B60D1AF8379C005D643E /* MessageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewerViewController.swift; path = Techeria_iOS/MessageViewerViewController.swift; sourceTree = "<group>"; };
+		71B4B60F1AF840EA005D643E /* App Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "App Icons"; path = "Techeria_iOS/App Icons"; sourceTree = "<group>"; };
 		71CA30C31AF70D9F0074B076 /* home-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-32.png"; path = "Techeria_iOS/home-32.png"; sourceTree = "<group>"; };
 		71CA30C51AF712E70074B076 /* NewMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageViewController.swift; path = Techeria_iOS/NewMessageViewController.swift; sourceTree = "<group>"; };
 		71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu_start_taskbar_and_window_panel_list-128.png"; path = "Techeria_iOS/menu_start_taskbar_and_window_panel_list-128.png"; sourceTree = "<group>"; };
@@ -100,6 +110,8 @@
 		9240066019CABECA00371784 /* Techeria_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				71B4B60F1AF840EA005D643E /* App Icons */,
+				71B4B6091AF8326A005D643E /* happy_user.png */,
 				71CA30CF1AF734ED0074B076 /* menu_start_taskbar_and_window_panel_list-128.png */,
 				71CA30C31AF70D9F0074B076 /* home-32.png */,
 				719086841AF5AF030023C4B7 /* administrator-32.png */,
@@ -119,6 +131,9 @@
 				7190868C1AF5BC7B0023C4B7 /* MessageTableViewController.swift */,
 				71CA30C51AF712E70074B076 /* NewMessageViewController.swift */,
 				719AE7821AF7568700F289BD /* ForumViewController.swift */,
+				71B4B6071AF8287D005D643E /* ConnectionTableViewController.swift */,
+				71B4B60B1AF833B8005D643E /* ConnectionViewerViewController.swift */,
+				71B4B60D1AF8379C005D643E /* MessageViewerViewController.swift */,
 			);
 			name = Techeria_iOS;
 			path = /Users/jmelberg/Development/Techeria_iOS;
@@ -213,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				719086721AF550280023C4B7 /* orange_techeria_logo.jpg in Resources */,
+				71B4B60A1AF8326A005D643E /* happy_user.png in Resources */,
+				71B4B6101AF840EA005D643E /* App Icons in Resources */,
 				71B1EA3A1AF01F5100E135F5 /* Images.xcassets in Resources */,
 				719086881AF5AF030023C4B7 /* administrator-32.png in Resources */,
 				719086891AF5AF030023C4B7 /* group-32.png in Resources */,
@@ -240,9 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B4B60C1AF833B8005D643E /* ConnectionViewerViewController.swift in Sources */,
 				71B2F6191AF1B3EA00F6EE4D /* HomeViewController.swift in Sources */,
+				71B4B60E1AF8379C005D643E /* MessageViewerViewController.swift in Sources */,
 				71B2F6171AF1B37F00F6EE4D /* LoginViewController.swift in Sources */,
 				719086831AF56D070023C4B7 /* FeedTableViewController.swift in Sources */,
+				71B4B6081AF8287D005D643E /* ConnectionTableViewController.swift in Sources */,
 				71B1EA351AF01F0800E135F5 /* AppDelegate.swift in Sources */,
 				719AE7831AF7568700F289BD /* ForumViewController.swift in Sources */,
 				7190868D1AF5BC7B0023C4B7 /* MessageTableViewController.swift in Sources */,

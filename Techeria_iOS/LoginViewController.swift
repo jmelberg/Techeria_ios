@@ -25,6 +25,30 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        let loggedIn = NSUserDefaults.standardUserDefaults().stringForKey("access_token")
+        if (loggedIn != nil){
+            // Deactivate Token
+            NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "access_token")
+            //self.performSegueWithIdentifier("login", sender: self)
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        username_attempt.resignFirstResponder()
+        password_attempt.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            self.view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
+
+    
 
     @IBAction func signin(sender: AnyObject) {
         

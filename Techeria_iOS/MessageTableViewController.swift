@@ -82,6 +82,9 @@ class MessageTableViewController: UITableViewController {
                                     message.recipient = recipient
                                     if let text = separator[i]["text"] as? String{
                                         message.text = text
+                                        if let subject = separator[i]["subject"] as? String{
+                                            message.subject = subject
+                                        }
                                     }
                                 }
                             }
@@ -113,6 +116,24 @@ class MessageTableViewController: UITableViewController {
         cell.detailTextLabel?.text = text
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let rowData = self.tableView.dequeueReusableCellWithIdentifier("Message", forIndexPath: indexPath) as! UITableViewCell
+        
+        var message_sender = messages[indexPath.row].sender
+        var message_subject = messages[indexPath.row].subject
+        var message_text = messages[indexPath.row].text
+        
+        NSUserDefaults.standardUserDefaults().setObject(message_sender, forKey: "message_sender")
+        NSUserDefaults.standardUserDefaults().setObject(message_subject, forKey: "message_subject")
+        NSUserDefaults.standardUserDefaults().setObject(message_text, forKey: "message_text")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        println("Stored Message Data")
+        NSOperationQueue.mainQueue().addOperationWithBlock{
+            self.performSegueWithIdentifier("messageView", sender: self)
+        }
+    }
+
     
     /*
     // Override to support conditional editing of the table view.
